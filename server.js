@@ -11,10 +11,8 @@ const signin=require('./controllers/signin')
 const db = knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
-    user : 'postgres',
-    password : '4455',
-    database : 'faceapp'
+    connectionString: process.env.DATABASE_URL,
+    ssl:true
     }
   });
  
